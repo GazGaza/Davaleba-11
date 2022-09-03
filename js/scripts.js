@@ -1,21 +1,21 @@
 function anteba(){
     document.getElementById("natura").src = "img/naturaon.png";
+    document.getElementById("natura").alt = "naturaoff";
 }
 function chaqroba(){
     document.getElementById("natura").src = "img/naturaoff.png";
+    document.getElementById("natura").alt = "natura";
 }
 
 function universal(){
-    let suratismisamarti = document.getElementById("natura").src;
-
-    console.log(suratismisamarti);
-
-    if(suratismisamarti == "file:///C:/Users/Salita/OneDrive/Desktop/workshop%2011%20141/img/naturaoff.png"){
-        document.getElementById("natura").src = "img/naturaon.png";
+    
+    let naturaalt = document.getElementById("natura").alt;
+    if(naturaalt == "natura"){
+        anteba();
         document.getElementById("universal").innerHTML = "ჩაქრობა";
     }
-    else{
-        document.getElementById("natura").src = "img/naturaoff.png";
+    if(naturaalt == "naturaoff"){
+        chaqroba();
         document.getElementById("universal").innerHTML = "ანთება";
     }
 
